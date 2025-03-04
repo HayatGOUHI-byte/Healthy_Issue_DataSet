@@ -2,12 +2,13 @@ name: Sync Kaggle Notebook to GitHub
 
 on:
   schedule:
-    - cron: "0 * * * *"  # Vérifie chaque heure
+    - cron: "* * * * *"  # Exécution toutes les minutes
   workflow_dispatch:  # Permet un lancement manuel
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
